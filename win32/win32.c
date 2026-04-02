@@ -55,6 +55,10 @@
 
 #define UNZIP_INTERNAL
 #include "../unzip.h"
+/* Avoid macro collision with Win32 headers (e.g. enum/field names). */
+#ifdef CR
+#  undef CR
+#endif
 #include <windows.h>    /* must be AFTER unzip.h to avoid struct G problems */
 #ifdef __RSXNT__
 #  include "../win32/rsxntwin.h"
