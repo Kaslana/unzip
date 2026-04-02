@@ -1,0 +1,548 @@
+C:\Development\code\VisualStudio\MSVC\source\zip\unzip60>git status
+On branch main
+nothing to commit, working tree clean
+
+C:\Development\code\VisualStudio\MSVC\source\zip\unzip60>set PATH=C:\Users\Windows\.local\mingw64\bin;%PATH%
+
+C:\Development\code\VisualStudio\MSVC\source\zip\unzip60>mingw32-make -f win32\Makefile.gcc
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o unzip.o  -O2 -mtune=generic unzip.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from unzip.c:68:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o crc32.o  -O2 -mtune=generic crc32.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from zip.h:18,
+                 from crc32.c:24:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o crypt.o  -O2 -mtune=generic crypt.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from zip.h:18,
+                 from crypt.c:33:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o envargs.o  -O2 -mtune=generic envargs.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from envargs.c:33:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o explode.o  -O2 -mtune=generic explode.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from explode.c:118:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o extract.o  -O2 -mtune=generic extract.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from extract.c:37:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from extract.c:37:
+extract.c: In function 'fnfilter':
+win32/w32cfg.h:110:33: warning: pointer targets in assignment from 'char *' to 'const uch *' {aka 'const unsigned char *'} differ in signedness [-Wpointer-sign]
+  110 | #    define PREINCSTR(ptr) (ptr = (char *)_mbsinc((const uch *)(ptr)))
+      |                                 ^
+unzpriv.h:1267:21: note: in expansion of macro 'PREINCSTR'
+ 1267 | #define INCSTR(ptr) PREINCSTR(ptr)
+      |                     ^~~~~~~~~
+extract.c:2615:17: note: in expansion of macro 'INCSTR'
+ 2615 |                 INCSTR(r);
+      |                 ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o fileio.o  -O2 -mtune=generic fileio.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from fileio.c:62:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from fileio.c:62:
+fileio.c: In function 'UzpMessagePrnt':
+win32/w32cfg.h:110:33: warning: pointer targets in assignment from 'char *' to 'uch *' {aka 'unsigned char *'} differ in signedness [-Wpointer-sign]
+  110 | #    define PREINCSTR(ptr) (ptr = (char *)_mbsinc((const uch *)(ptr)))
+      |                                 ^
+unzpriv.h:1267:21: note: in expansion of macro 'PREINCSTR'
+ 1267 | #define INCSTR(ptr) PREINCSTR(ptr)
+      |                     ^~~~~~~~~
+fileio.c:1420:13: note: in expansion of macro 'INCSTR'
+ 1420 |             INCSTR(p);
+      |             ^~~~~~
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from fileio.c:62:
+fileio.c: In function 'do_string':
+fileio.c:2129:37: warning: passing argument 1 to restrict-qualified parameter aliases with argument 2 [-Wrestrict]
+ 2129 |                 Ext_ASCII_TO_Native((char *)G.outbuf, G.pInfo->hostnum,
+win32/w32cfg.h:270:65: note: in definition of macro 'ISO_TO_INTERN'
+  270 | #  define ISO_TO_INTERN(src, dst)  {if ((src) != (dst)) strcpy((dst), (src));}
+      |                                                                 ^~~
+unzpriv.h:3014:9: note: in expansion of macro '_ISO_INTERN'
+ 3014 |         _ISO_INTERN((string)); \
+      |         ^~~~~~~~~~~
+fileio.c:2129:17: note: in expansion of macro 'Ext_ASCII_TO_Native'
+ 2129 |                 Ext_ASCII_TO_Native((char *)G.outbuf, G.pInfo->hostnum,
+      |                 ^~~~~~~~~~~~~~~~~~~
+fileio.c:2243:30: warning: passing argument 1 to restrict-qualified parameter aliases with argument 2 [-Wrestrict]
+ 2243 |         Ext_ASCII_TO_Native(G.filename, G.pInfo->hostnum, G.pInfo->hostver,
+win32/w32cfg.h:270:65: note: in definition of macro 'ISO_TO_INTERN'
+  270 | #  define ISO_TO_INTERN(src, dst)  {if ((src) != (dst)) strcpy((dst), (src));}
+      |                                                                 ^~~
+unzpriv.h:3014:9: note: in expansion of macro '_ISO_INTERN'
+ 3014 |         _ISO_INTERN((string)); \
+      |         ^~~~~~~~~~~
+fileio.c:2243:9: note: in expansion of macro 'Ext_ASCII_TO_Native'
+ 2243 |         Ext_ASCII_TO_Native(G.filename, G.pInfo->hostnum, G.pInfo->hostver,
+      |         ^~~~~~~~~~~~~~~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o globals.o  -O2 -mtune=generic globals.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from globals.c:24:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o inflate.o  -O2 -mtune=generic inflate.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from inflate.h:36,
+                 from inflate.c:274:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o list.o  -O2 -mtune=generic list.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from list.c:24:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o match.o  -O2 -mtune=generic match.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from match.c:76:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from match.c:76:
+match.c: In function 'recmatch':
+win32/w32cfg.h:110:33: warning: pointer targets in assignment from 'char *' to 'const uch *' {aka 'const unsigned char *'} differ in signedness [-Wpointer-sign]
+  110 | #    define PREINCSTR(ptr) (ptr = (char *)_mbsinc((const uch *)(ptr)))
+      |                                 ^
+unzpriv.h:1267:21: note: in expansion of macro 'PREINCSTR'
+ 1267 | #define INCSTR(ptr) PREINCSTR(ptr)
+      |                     ^~~~~~~~~
+match.c:180:13: note: in expansion of macro 'INCSTR'
+  180 |     c = *p; INCSTR(p);
+      |             ^~~~~~
+win32/w32cfg.h:110:33: warning: pointer targets in assignment from 'char *' to 'const uch *' {aka 'const unsigned char *'} differ in signedness [-Wpointer-sign]
+  110 | #    define PREINCSTR(ptr) (ptr = (char *)_mbsinc((const uch *)(ptr)))
+      |                                 ^
+unzpriv.h:1267:21: note: in expansion of macro 'PREINCSTR'
+ 1267 | #define INCSTR(ptr) PREINCSTR(ptr)
+      |                     ^~~~~~~~~
+match.c:259:19: note: in expansion of macro 'INCSTR'
+  259 |                   INCSTR(q);
+      |                   ^~~~~~
+win32/w32cfg.h:110:33: warning: pointer targets in assignment from 'char *' to 'const uch *' {aka 'const unsigned char *'} differ in signedness [-Wpointer-sign]
+  110 | #    define PREINCSTR(ptr) (ptr = (char *)_mbsinc((const uch *)(ptr)))
+      |                                 ^
+unzpriv.h:1267:21: note: in expansion of macro 'PREINCSTR'
+ 1267 | #define INCSTR(ptr) PREINCSTR(ptr)
+      |                     ^~~~~~~~~
+match.c:280:24: note: in expansion of macro 'INCSTR'
+  280 |             for (; *s; INCSTR(s))
+      |                        ^~~~~~
+win32/w32cfg.h:110:33: warning: pointer targets in assignment from 'char *' to 'const uch *' {aka 'const unsigned char *'} differ in signedness [-Wpointer-sign]
+  110 | #    define PREINCSTR(ptr) (ptr = (char *)_mbsinc((const uch *)(ptr)))
+      |                                 ^
+unzpriv.h:1267:21: note: in expansion of macro 'PREINCSTR'
+ 1267 | #define INCSTR(ptr) PREINCSTR(ptr)
+      |                     ^~~~~~~~~
+match.c:296:32: note: in expansion of macro 'INCSTR'
+  296 |         for (q = p, e = 0; *q; INCSTR(q))       /* find closing bracket */
+      |                                ^~~~~~
+win32/w32cfg.h:110:33: warning: pointer targets in assignment from 'char *' to 'const uch *' {aka 'const unsigned char *'} differ in signedness [-Wpointer-sign]
+  110 | #    define PREINCSTR(ptr) (ptr = (char *)_mbsinc((const uch *)(ptr)))
+      |                                 ^
+unzpriv.h:1267:21: note: in expansion of macro 'PREINCSTR'
+ 1267 | #define INCSTR(ptr) PREINCSTR(ptr)
+      |                     ^~~~~~~~~
+match.c:306:45: note: in expansion of macro 'INCSTR'
+  306 |         for (c = 0, e = (*p == '-'); p < q; INCSTR(p)) {
+      |                                             ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o process.o  -O2 -mtune=generic process.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from process.c:34:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o ttyio.o  -O2 -mtune=generic ttyio.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from zip.h:18,
+                 from ttyio.c:29:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o ubz2err.o  -O2 -mtune=generic ubz2err.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from ubz2err.c:29:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o unreduce.o  -O2 -mtune=generic unreduce.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from unreduce.c:23:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o unshrink.o  -O2 -mtune=generic unshrink.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from unshrink.c:70:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o zipinfo.o  -O2 -mtune=generic zipinfo.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from zipinfo.c:26:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o win32.o  -O2 -mtune=generic -I. win32/win32.c
+In file included from win32/../unzpriv.h:586,
+                 from win32/../unzip.h:718,
+                 from win32/win32.c:57:
+win32/../win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+win32/win32.c: In function 'set_direc_attribs':
+win32/win32.c:1291:33: warning: pointer targets in passing argument 3 of 'SetSD' differ in signedness [-Wpointer-sign]
+ 1291 |                         NtAtt(d)->buf, NtAtt(d)->SDlen - EB_HEADSIZE);
+      |                                 ^
+      |                                 |
+      |                                 char *
+win32/win32.c:329:10: note: expected 'uch *' {aka 'unsigned char *'} but argument is of type 'char *'
+  329 |     uch *eb_ptr;
+      |          ^~~~~~
+win32/win32.c: In function 'wide_to_local_string':
+win32/win32.c:3017:9: warning: 'strncat' output may be truncated copying 1 byte from a string of length 8 [-Wstringop-truncation]
+ 3017 |         strncat(buffer, buf, 1);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o win32i64.o  -O2 -mtune=generic -I. win32/win32i64.c
+In file included from win32/../unzpriv.h:586,
+                 from win32/../unzip.h:718,
+                 from win32/../zip.h:18,
+                 from win32/win32i64.c:16:
+win32/../win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o nt.o  -O2 -mtune=generic -I. win32/nt.c
+In file included from win32/../unzpriv.h:586,
+                 from win32/../unzip.h:718,
+                 from win32/nt.c:40:
+win32/../win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+windres -o winapprc.o win32/winapp.rc
+gcc -o unzip.exe   -s unzip.o crc32.o crypt.o envargs.o explode.o extract.o fileio.o globals.o inflate.o list.o match.o process.o ttyio.o ubz2err.o unreduce.o unshrink.o zipinfo.o  win32.o win32i64.o nt.o winapprc.o  -luser32 -ladvapi32
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o funzip.o  -O2 -mtune=generic funzip.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from funzip.c:118:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o cryptf.o  -O2 -mtune=generic -DFUNZIP crypt.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from zip.h:18,
+                 from crypt.c:33:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o globalsf.o  -O2 -mtune=generic -DFUNZIP globals.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from globals.c:24:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o inflatef.o  -O2 -mtune=generic -DFUNZIP inflate.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from inflate.h:36,
+                 from inflate.c:274:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o ttyiof.o  -O2 -mtune=generic -DFUNZIP ttyio.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from zip.h:18,
+                 from ttyio.c:29:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o win32f.o  -O2 -mtune=generic -DFUNZIP -I. win32/win32.c
+In file included from win32/../unzpriv.h:586,
+                 from win32/../unzip.h:718,
+                 from win32/win32.c:57:
+win32/../win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o win32i64f.o  -O2 -mtune=generic -DFUNZIP -I. win32/win32i64.c
+In file included from win32/../unzpriv.h:586,
+                 from win32/../unzip.h:718,
+                 from win32/../zip.h:18,
+                 from win32/win32i64.c:16:
+win32/../win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -o funzip.exe   -s funzip.o crc32.o cryptf.o globalsf.o inflatef.o ttyiof.o  win32f.o win32i64f.o -luser32 -ladvapi32
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o unzipsfx.o  -Os -mtune=generic -DSFX unzip.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from unzip.c:68:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o crc32x.o  -Os -mtune=generic -DSFX crc32.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from zip.h:18,
+                 from crc32.c:24:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o cryptx.o  -Os -mtune=generic -DSFX crypt.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from zip.h:18,
+                 from crypt.c:33:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o extractx.o  -Os -mtune=generic -DSFX extract.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from extract.c:37:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from extract.c:37:
+extract.c: In function 'fnfilter':
+win32/w32cfg.h:110:33: warning: pointer targets in assignment from 'char *' to 'const uch *' {aka 'const unsigned char *'} differ in signedness [-Wpointer-sign]
+  110 | #    define PREINCSTR(ptr) (ptr = (char *)_mbsinc((const uch *)(ptr)))
+      |                                 ^
+unzpriv.h:1267:21: note: in expansion of macro 'PREINCSTR'
+ 1267 | #define INCSTR(ptr) PREINCSTR(ptr)
+      |                     ^~~~~~~~~
+extract.c:2615:17: note: in expansion of macro 'INCSTR'
+ 2615 |                 INCSTR(r);
+      |                 ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o fileiox.o  -Os -mtune=generic -DSFX fileio.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from fileio.c:62:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from fileio.c:62:
+fileio.c: In function 'UzpMessagePrnt':
+win32/w32cfg.h:110:33: warning: pointer targets in assignment from 'char *' to 'uch *' {aka 'unsigned char *'} differ in signedness [-Wpointer-sign]
+  110 | #    define PREINCSTR(ptr) (ptr = (char *)_mbsinc((const uch *)(ptr)))
+      |                                 ^
+unzpriv.h:1267:21: note: in expansion of macro 'PREINCSTR'
+ 1267 | #define INCSTR(ptr) PREINCSTR(ptr)
+      |                     ^~~~~~~~~
+fileio.c:1420:13: note: in expansion of macro 'INCSTR'
+ 1420 |             INCSTR(p);
+      |             ^~~~~~
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from fileio.c:62:
+fileio.c: In function 'do_string':
+fileio.c:2129:37: warning: passing argument 1 to restrict-qualified parameter aliases with argument 2 [-Wrestrict]
+ 2129 |                 Ext_ASCII_TO_Native((char *)G.outbuf, G.pInfo->hostnum,
+win32/w32cfg.h:270:65: note: in definition of macro 'ISO_TO_INTERN'
+  270 | #  define ISO_TO_INTERN(src, dst)  {if ((src) != (dst)) strcpy((dst), (src));}
+      |                                                                 ^~~
+unzpriv.h:3014:9: note: in expansion of macro '_ISO_INTERN'
+ 3014 |         _ISO_INTERN((string)); \
+      |         ^~~~~~~~~~~
+fileio.c:2129:17: note: in expansion of macro 'Ext_ASCII_TO_Native'
+ 2129 |                 Ext_ASCII_TO_Native((char *)G.outbuf, G.pInfo->hostnum,
+      |                 ^~~~~~~~~~~~~~~~~~~
+fileio.c:2243:30: warning: passing argument 1 to restrict-qualified parameter aliases with argument 2 [-Wrestrict]
+ 2243 |         Ext_ASCII_TO_Native(G.filename, G.pInfo->hostnum, G.pInfo->hostver,
+win32/w32cfg.h:270:65: note: in definition of macro 'ISO_TO_INTERN'
+  270 | #  define ISO_TO_INTERN(src, dst)  {if ((src) != (dst)) strcpy((dst), (src));}
+      |                                                                 ^~~
+unzpriv.h:3014:9: note: in expansion of macro '_ISO_INTERN'
+ 3014 |         _ISO_INTERN((string)); \
+      |         ^~~~~~~~~~~
+fileio.c:2243:9: note: in expansion of macro 'Ext_ASCII_TO_Native'
+ 2243 |         Ext_ASCII_TO_Native(G.filename, G.pInfo->hostnum, G.pInfo->hostver,
+      |         ^~~~~~~~~~~~~~~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o globalsx.o  -Os -mtune=generic -DSFX globals.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from globals.c:24:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o inflatex.o  -Os -mtune=generic -DSFX inflate.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from inflate.h:36,
+                 from inflate.c:274:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o matchx.o  -Os -mtune=generic -DSFX match.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from match.c:76:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from match.c:76:
+match.c: In function 'recmatch':
+win32/w32cfg.h:110:33: warning: pointer targets in assignment from 'char *' to 'const uch *' {aka 'const unsigned char *'} differ in signedness [-Wpointer-sign]
+  110 | #    define PREINCSTR(ptr) (ptr = (char *)_mbsinc((const uch *)(ptr)))
+      |                                 ^
+unzpriv.h:1267:21: note: in expansion of macro 'PREINCSTR'
+ 1267 | #define INCSTR(ptr) PREINCSTR(ptr)
+      |                     ^~~~~~~~~
+match.c:180:13: note: in expansion of macro 'INCSTR'
+  180 |     c = *p; INCSTR(p);
+      |             ^~~~~~
+win32/w32cfg.h:110:33: warning: pointer targets in assignment from 'char *' to 'const uch *' {aka 'const unsigned char *'} differ in signedness [-Wpointer-sign]
+  110 | #    define PREINCSTR(ptr) (ptr = (char *)_mbsinc((const uch *)(ptr)))
+      |                                 ^
+unzpriv.h:1267:21: note: in expansion of macro 'PREINCSTR'
+ 1267 | #define INCSTR(ptr) PREINCSTR(ptr)
+      |                     ^~~~~~~~~
+match.c:259:19: note: in expansion of macro 'INCSTR'
+  259 |                   INCSTR(q);
+      |                   ^~~~~~
+win32/w32cfg.h:110:33: warning: pointer targets in assignment from 'char *' to 'const uch *' {aka 'const unsigned char *'} differ in signedness [-Wpointer-sign]
+  110 | #    define PREINCSTR(ptr) (ptr = (char *)_mbsinc((const uch *)(ptr)))
+      |                                 ^
+unzpriv.h:1267:21: note: in expansion of macro 'PREINCSTR'
+ 1267 | #define INCSTR(ptr) PREINCSTR(ptr)
+      |                     ^~~~~~~~~
+match.c:280:24: note: in expansion of macro 'INCSTR'
+  280 |             for (; *s; INCSTR(s))
+      |                        ^~~~~~
+win32/w32cfg.h:110:33: warning: pointer targets in assignment from 'char *' to 'const uch *' {aka 'const unsigned char *'} differ in signedness [-Wpointer-sign]
+  110 | #    define PREINCSTR(ptr) (ptr = (char *)_mbsinc((const uch *)(ptr)))
+      |                                 ^
+unzpriv.h:1267:21: note: in expansion of macro 'PREINCSTR'
+ 1267 | #define INCSTR(ptr) PREINCSTR(ptr)
+      |                     ^~~~~~~~~
+match.c:296:32: note: in expansion of macro 'INCSTR'
+  296 |         for (q = p, e = 0; *q; INCSTR(q))       /* find closing bracket */
+      |                                ^~~~~~
+win32/w32cfg.h:110:33: warning: pointer targets in assignment from 'char *' to 'const uch *' {aka 'const unsigned char *'} differ in signedness [-Wpointer-sign]
+  110 | #    define PREINCSTR(ptr) (ptr = (char *)_mbsinc((const uch *)(ptr)))
+      |                                 ^
+unzpriv.h:1267:21: note: in expansion of macro 'PREINCSTR'
+ 1267 | #define INCSTR(ptr) PREINCSTR(ptr)
+      |                     ^~~~~~~~~
+match.c:306:45: note: in expansion of macro 'INCSTR'
+  306 |         for (c = 0, e = (*p == '-'); p < q; INCSTR(p)) {
+      |                                             ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o processx.o  -Os -mtune=generic -DSFX process.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from process.c:34:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o ttyiox.o  -Os -mtune=generic -DSFX ttyio.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from zip.h:18,
+                 from ttyio.c:29:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o ubz2errx.o  -Os -mtune=generic -DSFX ubz2err.c
+In file included from unzpriv.h:586,
+                 from unzip.h:718,
+                 from ubz2err.c:29:
+win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o win32x.o  -Os -mtune=generic -DSFX -I. win32/win32.c
+In file included from win32/../unzpriv.h:586,
+                 from win32/../unzip.h:718,
+                 from win32/win32.c:57:
+win32/../win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+In file included from win32/../unzpriv.h:586,
+                 from win32/../unzip.h:718,
+                 from win32/win32.c:57:
+win32/win32.c: In function 'GetLoadPath':
+win32/win32.c:215:18: warning: passing argument 1 to restrict-qualified parameter aliases with argument 2 [-Wrestrict]
+  215 |     _ISO_INTERN(G.filename);    /* translate to codepage of C rtl's stdio */
+win32/../win32/w32cfg.h:270:65: note: in definition of macro 'ISO_TO_INTERN'
+  270 | #  define ISO_TO_INTERN(src, dst)  {if ((src) != (dst)) strcpy((dst), (src));}
+      |                                                                 ^~~
+win32/win32.c:215:5: note: in expansion of macro '_ISO_INTERN'
+  215 |     _ISO_INTERN(G.filename);    /* translate to codepage of C rtl's stdio */
+      |     ^~~~~~~~~~~
+win32/win32.c: In function 'set_direc_attribs':
+win32/win32.c:1291:33: warning: pointer targets in passing argument 3 of 'SetSD' differ in signedness [-Wpointer-sign]
+ 1291 |                         NtAtt(d)->buf, NtAtt(d)->SDlen - EB_HEADSIZE);
+      |                                 ^
+      |                                 |
+      |                                 char *
+win32/win32.c:329:10: note: expected 'uch *' {aka 'unsigned char *'} but argument is of type 'char *'
+  329 |     uch *eb_ptr;
+      |          ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o win32i64x.o  -Os -mtune=generic -DSFX -I. win32/win32i64.c
+In file included from win32/../unzpriv.h:586,
+                 from win32/../unzip.h:718,
+                 from win32/../zip.h:18,
+                 from win32/win32i64.c:16:
+win32/../win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -c -DWIN32 -DFORCE_WIN32_OVER_UNIX  -Wall -DIZ_CRCOPTIM_UNFOLDTBL  -o ntx.o  -Os -mtune=generic -DSFX -I. win32/nt.c
+In file included from win32/../unzpriv.h:586,
+                 from win32/../unzip.h:718,
+                 from win32/nt.c:40:
+win32/../win32/w32cfg.h:54:16: warning: '_tzset' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   54 |    extern void _tzset(void);    /* this is missing in <time.h> */
+      |                ^~~~~~
+gcc -o unzipsfx.exe   -s unzipsfx.o crc32x.o cryptx.o extractx.o fileiox.o globalsx.o inflatex.o matchx.o processx.o ttyiox.o ubz2errx.o  win32x.o win32i64x.o ntx.o -luser32 -ladvapi32

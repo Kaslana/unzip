@@ -1,0 +1,138 @@
+C:\Development\code\VisualStudio\MSVC\source\zip\unzip60>git status
+On branch main
+nothing to commit, working tree clean
+
+C:\Development\code\VisualStudio\MSVC\source\zip\unzip60>nmake win32\Makefile
+
+Microsoft (R) 程序维护实用工具 14.44.35225.0 版
+版权所有 (C) Microsoft Corporation。  保留所有权利。
+
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -Founzip.obj unzip.c
+unzip.c
+unzip.c(1185): warning C4244: “=”: 从“__int64”转换到“unsigned int”，可能丢失数据
+unzip.c(1189): warning C4244: “=”: 从“__int64”转换到“unsigned int”，可能丢失数据
+unzip.c(1207): warning C4244: “=”: 从“__int64”转换到“unsigned int”，可能丢失数据
+unzip.c(1223): warning C4244: “=”: 从“__int64”转换到“unsigned int”，可能丢失数据
+unzip.c(1227): warning C4244: “=”: 从“__int64”转换到“unsigned int”，可能丢失数据
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -Focrc32.obj crc32.c
+crc32.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -Focrypt.obj crypt.c
+crypt.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -Foenvargs.obj envargs.c
+envargs.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -Foexplode.obj explode.c
+explode.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -Foextract.obj extract.c
+extract.c
+extract.c(2628): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -Fofileio.obj fileio.c
+fileio.c
+fileio.c(308): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+fileio.c(309): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+fileio.c(765): warning C4244: “+=”: 从“__int64”转换到“int”，可能丢失数据
+fileio.c(954): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+fileio.c(963): warning C4267: “-=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+fileio.c(979): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+fileio.c(1064): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+fileio.c(1411): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+fileio.c(2247): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+fileio.c(2726): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -Foglobals.obj globals.c
+globals.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -Foinflate.obj inflate.c
+inflate.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -Folist.obj list.c
+list.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -Fomatch.obj match.c
+match.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -Foprocess.obj process.c
+process.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -Fottyio.obj ttyio.c
+ttyio.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -Foubz2err.obj ubz2err.c
+ubz2err.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -Founreduce.obj unreduce.c
+unreduce.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -Founshrink.obj unshrink.c
+unshrink.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -Fozipinfo.obj zipinfo.c
+zipinfo.c
+zipinfo.c(1585): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+zipinfo.c(1594): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -I. win32/win32.c -Fowin32.obj
+win32.c
+win32/win32.c(511): warning C4996: 'GetVersion': 被声明为已否决
+win32/win32.c(1540): warning C4244: “=”: 从“__int64”转换到“int”，可能丢失数据
+win32/win32.c(1698): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+win32/win32.c(2425): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -I. win32/win32i64.c -Fowin32i64.obj
+win32i64.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -I. win32/nt.c -Font.obj
+nt.c
+        rc /l 0x409 /fowinapp.res /i win32 /d WIN32 win32/winapp.rc
+Microsoft (R) Windows (R) Resource Compiler Version 10.0.10011.16384
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        link /RELEASE /INCREMENTAL:NO /PDB:NONE /NOLOGO /subsystem:console kernel32.lib  advapi32.lib user32.lib   unzip.obj crc32.obj crypt.obj envargs.obj explode.obj extract.obj fileio.obj globals.obj inflate.obj list.obj match.obj process.obj ttyio.obj ubz2err.obj unreduce.obj unshrink.obj zipinfo.obj win32.obj win32i64.obj nt.obj winapp.res -out:unzip.exe
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -Fofunzip.obj funzip.c
+funzip.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DFUNZIP crc32.c -Focrc32f.obj
+crc32.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DFUNZIP crypt.c -Focryptf.obj
+crypt.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DFUNZIP globals.c -Foglobalsf.obj
+globals.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DFUNZIP inflate.c -Foinflatef.obj
+inflate.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DFUNZIP ttyio.c -Fottyiof.obj
+ttyio.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DFUNZIP -I. win32/win32.c -Fowin32f.obj
+win32.c
+        cl -O2 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DFUNZIP -I. win32/win32i64.c -Fowin32i64f.obj
+win32i64.c
+        link /RELEASE /INCREMENTAL:NO /PDB:NONE /NOLOGO /subsystem:console kernel32.lib  advapi32.lib user32.lib   funzip.obj crc32f.obj cryptf.obj globalsf.obj inflatef.obj ttyiof.obj win32f.obj win32i64f.obj -out:funzip.exe
+        cl -O1 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DSFX unzip.c -Founzipsfx.obj
+unzip.c
+unzip.c(1185): warning C4244: “=”: 从“__int64”转换到“unsigned int”，可能丢失数据
+unzip.c(1189): warning C4244: “=”: 从“__int64”转换到“unsigned int”，可能丢失数据
+unzip.c(1207): warning C4244: “=”: 从“__int64”转换到“unsigned int”，可能丢失数据
+unzip.c(1223): warning C4244: “=”: 从“__int64”转换到“unsigned int”，可能丢失数据
+unzip.c(1227): warning C4244: “=”: 从“__int64”转换到“unsigned int”，可能丢失数据
+        cl -O1 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DSFX crc32.c -Focrc32_.obj
+crc32.c
+        cl -O1 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DSFX crypt.c -Focrypt_.obj
+crypt.c
+        cl -O1 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DSFX extract.c -Foextract_.obj
+extract.c
+extract.c(2628): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+        cl -O1 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DSFX fileio.c -Fofileio_.obj
+fileio.c
+fileio.c(308): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+fileio.c(309): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+fileio.c(765): warning C4244: “+=”: 从“__int64”转换到“int”，可能丢失数据
+fileio.c(1064): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+fileio.c(1411): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+fileio.c(2247): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+fileio.c(2726): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+        cl -O1 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DSFX globals.c -Foglobals_.obj
+globals.c
+        cl -O1 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DSFX inflate.c -Foinflate_.obj
+inflate.c
+        cl -O1 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DSFX match.c -Fomatch_.obj
+match.c
+        cl -O1 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DSFX process.c -Foprocess_.obj
+process.c
+        cl -O1 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DSFX ttyio.c -Fottyio_.obj
+ttyio.c
+        cl -O1 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DSFX ubz2err.c -Foubz2err_.obj
+ubz2err.c
+        cl -O1 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DSFX -I. win32/win32.c -Fowin32_.obj
+win32.c
+win32/win32.c(511): warning C4996: 'GetVersion': 被声明为已否决
+win32/win32.c(1698): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+win32/win32.c(2425): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+        cl -O1 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DSFX -I. win32/win32i64.c -Fowin32i64_.obj
+win32i64.c
+        cl -O1 -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo  -DWIN32 -D_WIN32 -nologo -J -D_MBCS -DNO_ASM -DIZ_CRCOPTIM_UNFOLDTBL -DUNICODE_SUPPORT  -DSFX -I. win32/nt.c -Font_.obj
+nt.c
+        link /RELEASE /INCREMENTAL:NO /PDB:NONE /NOLOGO /subsystem:console kernel32.lib  advapi32.lib user32.lib   unzipsfx.obj crc32_.obj crypt_.obj extract_.obj fileio_.obj globals_.obj inflate_.obj match_.obj process_.obj ttyio_.obj ubz2err_.obj win32_.obj win32i64_.obj nt_.obj  -out:unzipsfx.exe

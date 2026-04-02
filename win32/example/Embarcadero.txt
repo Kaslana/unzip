@@ -1,0 +1,229 @@
+C:\Development\code\VisualStudio\MSVC\source\zip\unzip60>set RC=C:\Users\Windows\.local\BCC102\bin\rc.exe
+
+C:\Development\code\VisualStudio\MSVC\source\zip\unzip60>set INCLUDE=C:\Users\Windows\.local\BCC102\include\windows\sdk;C:\Users\Windows\.local\BCC102\include\windows\crtl;C:\Users\Windows\.local\BCC102\include\dinkumware64
+
+C:\Development\code\VisualStudio\MSVC\source\zip\unzip60>make -f win32\Makefile.bc
+MAKE Version 5.41  Copyright (c) 1987, 2014 Embarcadero Technologies, Inc.
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O2 -OS -Oc unzip.c crc32.c crypt.c envargs.c explode.c extract.c fileio.c globals.c inflate.c list.c match.c process.c ttyio.c ubz2err.c unreduce.c unshrink.c zipinfo.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+Warning: option '-Oc' is not supported in Clang-based compiler.
+unzip.c:
+crc32.c:
+crypt.c:
+envargs.c:
+explode.c:
+extract.c:
+fileio.c:
+globals.c:
+inflate.c:
+list.c:
+match.c:
+process.c:
+ttyio.c:
+ubz2err.c:
+unreduce.c:
+unshrink.c:
+zipinfo.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O2 -OS -Oc win32/win32.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+Warning: option '-Oc' is not supported in Clang-based compiler.
+win32/win32.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O2 -OS -Oc win32/win32i64.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+Warning: option '-Oc' is not supported in Clang-based compiler.
+win32/win32i64.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O2 -OS -Oc win32/nt.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+Warning: option '-Oc' is not supported in Clang-based compiler.
+win32/nt.c:
+        C:\Users\Windows\.local\BCC102\bin\rc.exe /l 0x409 /fowinapp.res /i win32 /d WIN32 win32/winapp.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.0.5724.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        bcc32c  -eunzip.exe @MAKE0000.@@@
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Turbo Incremental Link 6.90 Copyright (c) 1997-2017 Embarcadero Technologies, Inc.
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O2 -OS -Oc -K -DFUNZIP -ofunzip.obj funzip.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+Warning: option '-Oc' is not supported in Clang-based compiler.
+funzip.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O2 -OS -Oc -K -DFUNZIP -ocrc32f.obj crc32.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+Warning: option '-Oc' is not supported in Clang-based compiler.
+crc32.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O2 -OS -Oc -K -DFUNZIP -ocryptf.obj crypt.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+Warning: option '-Oc' is not supported in Clang-based compiler.
+crypt.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O2 -OS -Oc -K -DFUNZIP -oglobalsf.obj globals.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+Warning: option '-Oc' is not supported in Clang-based compiler.
+globals.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O2 -OS -Oc -K -DFUNZIP -oinflatef.obj inflate.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+Warning: option '-Oc' is not supported in Clang-based compiler.
+inflate.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O2 -OS -Oc -K -DFUNZIP -ottyiof.obj ttyio.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+Warning: option '-Oc' is not supported in Clang-based compiler.
+ttyio.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O2 -OS -Oc -K -DFUNZIP -owin32f.obj win32/win32.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+Warning: option '-Oc' is not supported in Clang-based compiler.
+win32/win32.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O2 -OS -Oc -K -DFUNZIP -owin32i64f.obj win32/win32i64.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+Warning: option '-Oc' is not supported in Clang-based compiler.
+win32/win32i64.c:
+        bcc32c  -efunzip.exe @MAKE0001.@@@
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Turbo Incremental Link 6.90 Copyright (c) 1997-2017 Embarcadero Technologies, Inc.
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O1 -OS -DSFX -ounzipsfx.obj unzip.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+unzip.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O1 -OS -DSFX -ocrc32x.obj crc32.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+crc32.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O1 -OS -DSFX -ocryptx.obj crypt.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+crypt.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O1 -OS -DSFX -oextractx.obj extract.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+extract.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O1 -OS -DSFX -ofileiox.obj fileio.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+fileio.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O1 -OS -DSFX -oglobalsx.obj globals.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+globals.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O1 -OS -DSFX -oinflatex.obj inflate.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+inflate.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O1 -OS -DSFX -omatchx.obj match.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+match.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O1 -OS -DSFX -oprocessx.obj process.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+process.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O1 -OS -DSFX -ottyiox.obj ttyio.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+ttyio.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O1 -OS -DSFX -oubz2errx.obj ubz2err.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+ubz2err.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O1 -OS -DSFX -owin32x.obj win32/win32.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+win32/win32.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O1 -OS -DSFX -owin32i64x.obj win32/win32i64.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+win32/win32i64.c:
+        bcc32c -c -w- -6 -d -ff- -k- -P-.C -I.    -O1 -OS -DSFX -ontx.obj win32/nt.c
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Warning: option '-6' is not supported in Clang-based compiler.
+Warning: option '-ff-' is not supported in Clang-based compiler.
+Warning: option '-k-' is not supported in Clang-based compiler.
+Warning: option '-OS' is not supported in Clang-based compiler.
+win32/nt.c:
+        bcc32c  -eunzipsfx.exe @MAKE0002.@@@
+Embarcadero C++ 7.30 for Win32 Copyright (c) 2012-2017 Embarcadero Technologies, Inc.
+Turbo Incremental Link 6.90 Copyright (c) 1997-2017 Embarcadero Technologies, Inc.
