@@ -59,7 +59,17 @@
 #ifdef CR
 #  undef CR
 #endif
+/* __G (used by old Info-ZIP prototypes) collides with modern MinGW intrinsics. */
+#ifdef __G
+#  pragma push_macro("__G")
+#  undef __G
+#  define IZ_RESTORE___G 1
+#endif
 #include <windows.h>    /* must be AFTER unzip.h to avoid struct G problems */
+#ifdef IZ_RESTORE___G
+#  pragma pop_macro("__G")
+#  undef IZ_RESTORE___G
+#endif
 #ifdef __RSXNT__
 #  include "../win32/rsxntwin.h"
 #endif

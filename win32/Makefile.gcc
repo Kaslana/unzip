@@ -6,6 +6,9 @@
 #
 # To use, do "make -f win32/makefile.gcc".
 
+# Detect compiler target triplet.
+GCC_TARGET = $(shell gcc -dumpmachine)
+
 # configuration switches supported:
 #   NOASM=1     disable assembler crc32 code, the generic C source code
 #               is used instead.
@@ -35,7 +38,11 @@ endif
 
 # default is ASM CRC code (from .S source) for now...
 ifndef APPLY_ASMCRC
+ifeq ($(findstring x86_64,$(GCC_TARGET)),x86_64)
+APPLY_ASMCRC=0
+else
 APPLY_ASMCRC=1
+endif
 endif
 
 # optional inclusion of bzip2 decompression
@@ -128,7 +135,11 @@ LD_RELEASE_OPT = -s
 
 # Prefered target CPU (instruction scheduling optimized for...)
 ifndef CC_CPU_OPT
+ifeq ($(findstring x86_64,$(GCC_TARGET)),x86_64)
+CC_CPU_OPT = -mtune=generic
+else
 CC_CPU_OPT = -mcpu=pentiumpro
+endif
 endif
 
 # Smallest code  (-Os is new since EGC 1.1, use -O1 for 2.8.1 and earlier)
