@@ -66,10 +66,21 @@
 #  define FILE_SHARE_DELETE 0x00000004
 #endif
 
-/* This macro definition is missing in old versions of MS' winbase.h. */
-#ifndef InterlockedExchangePointer
+/*
+ * Some bcc32c (Clang-based Borland) environments expose
+ * InterlockedExchangePointer as a compiler helper that may not be linked
+ * for this legacy build setup.  Force the classic 32-bit fallback.
+ */
+#if defined(__BORLANDC__)
+#  ifdef InterlockedExchangePointer
+#    undef InterlockedExchangePointer
+#  endif
 #  define InterlockedExchangePointer(Target, Value) \
-      (PVOID)InterlockedExchange((PLONG)(Target), (LONG)(Value))
+    (PVOID)InterlockedExchange((PLONG)(Target), (LONG)(Value))
+#elif !defined(InterlockedExchangePointer)
+/* This macro definition is missing in old versions of MS' winbase.h. */
+#  define InterlockedExchangePointer(Target, Value) \
+    (PVOID)InterlockedExchange((PLONG)(Target), (LONG)(Value))
 #endif
 
 

@@ -53,7 +53,7 @@ LOC = -DW32_USE_IZ_TIMEZONE $(LOC)
 # If you have bcc32i, you should define:
 # CC = bcc32i
 # This compiler generates a faster code.
-CC = bcc32
+CC = bcc32c
 !ifdef USETASM16
 AS = tasm
 !else
