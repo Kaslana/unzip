@@ -78,9 +78,9 @@
 #  define InterlockedExchangePointer(Target, Value) \
     (PVOID)InterlockedExchange((PLONG)(Target), (LONG)(Value))
 #elif !defined(InterlockedExchangePointer)
-/* This macro definition is missing in old versions of MS' winbase.h. */
-#  define InterlockedExchangePointer(Target, Value) \
-    (PVOID)InterlockedExchange((PLONG)(Target), (LONG)(Value))
+/* Older SDKs may miss this declaration/macro. */
+WINBASEAPI PVOID WINAPI InterlockedExchangePointer(PVOID volatile *Target,
+                                                   PVOID Value);
 #endif
 
 

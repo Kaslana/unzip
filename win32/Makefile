@@ -138,6 +138,9 @@ USE_UTF8=1
 !IF "$(CPU)" == ""  &&  "$(PROCESSOR_ARCHITECTURE)" == "x86"
 CPU = i386
 !ENDIF
+!IF "$(CPU)" == ""  &&  "$(VSCMD_ARG_TGT_ARCH)" != ""
+CPU = $(VSCMD_ARG_TGT_ARCH)
+!ENDIF
 !IF "$(CPU)" == ""  &&  "$(PROCESSOR_ARCHITECTURE)" == "MIPS"
 CPU = $(PROCESSOR_ARCHITECTURE)
 !ENDIF
@@ -147,9 +150,23 @@ CPU = $(PROCESSOR_ARCHITECTURE)
 !IF "$(CPU)" == ""  &&  "$(PROCESSOR_ARCHITECTURE)" == "PPC"
 CPU = $(PROCESSOR_ARCHITECTURE)
 !ENDIF
+!IF "$(CPU)" == ""  &&  "$(PROCESSOR_ARCHITECTURE)" == "AMD64"
+CPU = AMD64
+!ENDIF
+!IF "$(CPU)" == ""  &&  "$(PROCESSOR_ARCHITECTURE)" == "ARM64"
+CPU = ARM64
+!ENDIF
 !IF "$(CPU)" == ""
 CPU = i386
 !ENDIF
+
+# win32/crc_i386.c provides crc32() only for 32-bit x86 inline asm builds.
+# On other targets, force the portable C crc32 implementation.
+!if "$(CPU)" != "i386"
+!if "$(CPU)" != "x86"
+APPLY_ASMCRC=0
+!endif
+!endif
 
 # special subdirectory for the static library binaries, to separate them
 # from other binaries (including dll import library file)
